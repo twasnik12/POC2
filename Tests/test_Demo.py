@@ -115,6 +115,8 @@ class Test_database(BaseClass2, softest.TestCase):
         log.info("clicking on follow link")
         homepage.nextPage1().click()
 
+        #add new line
+
 
 
 
