@@ -64,25 +64,6 @@ class Test_database(BaseClass2, softest.TestCase):
         print(homepage.Title().text)
         assert homepage.Title().text == "Student's Performance "
 
-        # checking for the image is displayed or not
-        # image = homepage.imageBag().is_displayed()
-        # print("image is diplayed", image)
-
-        # # Find the image element
-        # image_element = driver.find_element_by_xpath('(//div[@class="imageBackground"])[3]')
-        #
-        # # Get the image source URL
-        #  image_url = image_element.get_attribute('src')
-
-        # Find the image element
-        # image_element =driver.find_element_by_xpath('(//div[@class="imageBackground"])[3]')
-
-
-
-
-
-
-
         log.info("click on the dropdownn button for Institute")
         homepage.Institue().click()
         log.info("checking for the slicer for institue")
@@ -99,12 +80,14 @@ class Test_database(BaseClass2, softest.TestCase):
             print("checkbox was not selected")
             checkbox.click()
 
-
+        # image is displayed or not
         log.info("checking for the Image present")
         if homepage.imageBag1().is_displayed():
             print("Image is displayed.")
         else:
             print("Image is not displayed.")
+
+        #image is dispalyed or not
 
         log.info("checking for the Image present")
         if homepage.imageBag2().is_displayed():
@@ -112,9 +95,15 @@ class Test_database(BaseClass2, softest.TestCase):
         else:
             print("Image is not displayed.")
 
+        #print number fro dashboard
+
         print(homepage.number1().text)
 
+        #print student  from dashboard
+
         print(homepage.student1().text)
+
+        #print image from dashboard
 
         log.info("checking for the Image present")
         if homepage.kulkarni1().is_displayed():
@@ -122,6 +111,7 @@ class Test_database(BaseClass2, softest.TestCase):
         else:
             print("Image is not displayed.")
 
+        #click on next page link from dashboard
         log.info("clicking on follow link")
         homepage.nextPage1().click()
 
